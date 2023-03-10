@@ -9,4 +9,7 @@ html, body {
     height: 100%;
 
     display: flex;
+    
+    background-image: url("./Desktop/background.jpg");
+    background-size: 100%;
 }
