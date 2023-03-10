@@ -8,6 +8,17 @@
     }
 }
 
+@keyframes hover_linear {
+    from {
+        background-color: rgba(44, 41, 38, 0);
+
+    }
+
+    to {
+        background-color: rgba(44, 41, 38, 1);
+    }
+}
+
 
 #taskbar {
 
@@ -21,10 +32,31 @@
 
     animation-name: affichage_taskbar;
     animation-duration: 0.8s;
+
 }
 
-#taskbar > *{
-    height: 55%;
-    margin-left: 1.5vw;
+.element_taskbar { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    height: 85%;
+    width: 5.2vh;
+    
+    margin-left: 0.5vh;
+
+    cursor: pointer;
+}
+
+.element_taskbar > *{
+    height: 65%;
+    
+}
+
+.element_taskbar:hover{
+    border-radius: 7px;
+
+    animation-name: hover_linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 }
