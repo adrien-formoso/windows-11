@@ -2,11 +2,19 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #main {
     width: 100%;
-    height: 100%;
+    flex: 1; 
 
     display: flex;
+    flex-direction: column-reverse;
+    
+    background-image: url("./asset/asset_desktop/background.jpg");
+    background-size: cover;
+
+    overflow: hidden;
 }
