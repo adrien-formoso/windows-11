@@ -6,7 +6,7 @@ html, body {
     flex-direction: column;
 }
 
-#main {
+#Desktop {
     width: 100%;
     flex: 1; 
 
@@ -18,3 +18,5 @@ html, body {
 
     overflow: hidden;
 }
+
+
