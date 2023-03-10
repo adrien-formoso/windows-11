@@ -46,11 +46,11 @@
 
 #spanLogin {
     position: relative;
-    top: 7vw;
+    top: 18vh;
     height: 200px;
     font-family:  Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
-    font-size: 7vw;
+    font-size: 15vh;
     font-weight: 500;
     transition: all 0.5s linear;
 }
