@@ -1,0 +1,30 @@
+@keyframes affichage_taskbar {
+    from {
+        transform: translateY(10vh);
+    }
+
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+
+#taskbar {
+
+    height: 6vh;
+    width: 100%;
+    background-color: #1c1a18;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+    animation-name: affichage_taskbar;
+    animation-duration: 0.8s;
+}
+
+#taskbar > *{
+    height: 55%;
+    margin-left: 1.5vw;
+
+}
