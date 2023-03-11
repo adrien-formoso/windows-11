@@ -6,17 +6,4 @@ html, body {
     flex-direction: column;
 }
 
-#Desktop {
-    width: 100%;
-    flex: 1; 
-
-    display: flex;
-    flex-direction: column-reverse;
-    
-    background-image: url("./asset/asset_desktop/background.jpg");
-    background-size: cover;
-
-    overflow: hidden;
-}
-
 
