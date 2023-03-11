@@ -94,13 +94,13 @@ function open_fenetre_txt () {
             const leftdiv = div.offsetLeft;
             const parentWidth = div.parentNode.offsetWidth;
             const remainingSpace = parentWidth - (leftdiv + width);
-            div.style.maxWidth=remainingSpace+width-6+"px"
+            div.style.maxWidth=remainingSpace+width-8+"px"
             
             const height_fenetre = div.offsetHeight;
             const topdiv = div.offsetTop;
             const parentHeight = div.parentNode.offsetHeight;
             const remainingSpaceHeight = parentHeight - (topdiv + height_fenetre);
-            div.style.maxHeight=remainingSpaceHeight+height_fenetre-5+"px"
+            div.style.maxHeight=remainingSpaceHeight+height_fenetre-8+"px"
             console.log(parentHeight)
     
             const top = event.clientY - offsetY;
