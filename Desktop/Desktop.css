@@ -99,7 +99,12 @@
     height: 80%;
 }
 
-.fenetre_header_full_button > div{
+#fenetre_txt_header_refresh_button > img{
+    width: 55%;
+    height: 55%;
+}
+
+.fenetre_txt_header_refresh_button{
     width: 1.5vh;
     height: 1.5vh;
     border : 1px solid white;
