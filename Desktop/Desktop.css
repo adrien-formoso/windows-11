@@ -104,6 +104,7 @@
     height: 60%;
     min-height: 2vh;
     margin-left: 2vh;
+    user-select:none
 }
 
 #fenetre_txt_header_info > span {
@@ -112,5 +113,6 @@
     font-family:  Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     font-size: 0.75rem;
-    white-space: nowrap
+    white-space: nowrap;
+    user-select:none
 }

@@ -1,6 +1,5 @@
 const Desktop = document.getElementById("Desktop")
 
-
 function open_fenetre_txt () {
 
 const fenetre_txt = document.createElement("div")
@@ -80,20 +79,36 @@ Desktop.appendChild(fenetre_txt)
     
     function onMouseMove(event) {
         const left = event.clientX - offsetX;
+        const right = window.innerWidth - offsetX-event.clientX ;
+     
+        const width = div.offsetWidth;
+        const leftdiv = div.offsetLeft;
+        const parentWidth = div.parentNode.offsetWidth;
+        const remainingSpace = parentWidth - (leftdiv + width);
+        div.style.maxWidth=remainingSpace+width-5+"px"
+        
+        const height_fenetre = div.offsetHeight;
+        const topdiv = div.offsetTop;
+        const parentHeight = div.parentNode.offsetHeight;
+        const remainingSpaceHeight = parentHeight - (topdiv + height_fenetre);
+        div.style.maxHeight=remainingSpaceHeight+height_fenetre-5+"px"
+        console.log(parentHeight)
+
         const top = event.clientY - offsetY;
+
         
         if (left < 0) {
           div.style.left = "0px";
         } else {
           div.style.left = left + "px";
         }
-        
 
         if (top < 0) {
           div.style.top = "0px";
         } else {
           div.style.top = top + "px";
         }
+
 
         const windowWidth = window.innerWidth;
         const windowRight = windowWidth - left - width;
@@ -121,9 +136,8 @@ Desktop.appendChild(fenetre_txt)
   
     fenetre_txt.style.maxWidth = taille_max_width_fenetre;
     fenetre_txt.style.maxHeight = taille_max_height_fenetre;
-    console.log(bottom);
 
 } 
 
-  open_fenetre_txt()
+
 
