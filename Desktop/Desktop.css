@@ -10,6 +10,7 @@
     background-size: cover;
 
     overflow: hidden;
+    user-select:none
 }
 
 .fenetre {
@@ -39,6 +40,7 @@
 
     display: flex;
     align-items: center;
+    user-select:none
 }
 
 #fenetre_txt_header_info {
