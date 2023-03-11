@@ -29,33 +29,65 @@ function open_fenetre_txt () {
     
                 const fenetre_txt_header_logo = document.createElement("img")
                 fenetre_txt_header_logo.id = "fenetre_txt_header_logo"
-                fenetre_txt_header_logo.src = "./asset/asset_desktop/logo_txt.png"
+                fenetre_txt_header_logo.src = "./asset/asset_desktop/PDF_file_icon.svg"
                 fenetre_txt_header_info.appendChild(fenetre_txt_header_logo)
     
                 const fenetre_txt_header_span = document.createElement("span")
                 fenetre_txt_header_span.id = "fenetre_txt_header_span"
-                fenetre_txt_header_span.innerText = "contact.txt - Bloc-note"
+                fenetre_txt_header_span.innerText = "Mon-cv.pdf"
                 fenetre_txt_header_info.appendChild(fenetre_txt_header_span)
     
             const fenetre_txt_header_area_button = document.createElement("div")
             fenetre_txt_header_area_button.id = "fenetre_txt_header_area_button"
             fenetre_txt_header_area_button.classList.add("fenetre_header_area_button")
             fenetre_txt_header.appendChild(fenetre_txt_header_area_button)
-    
+
+                const fenetre_txt_header_full_button = document.createElement("div")
+                fenetre_txt_header_full_button.id = "fenetre_txt_header_full_button"
+                fenetre_txt_header_full_button.classList.add("fenetre_header_full_button")
+                fenetre_txt_header_area_button.appendChild(fenetre_txt_header_full_button)
+                
+                fenetre_txt_header_full_button.onclick = function () {
+                  fenetre_txt.style.width = "100%"
+                  fenetre_txt.style.height = "calc(100% - 7vh)"
+                }
+
+                  const fenetre_txt_header_full_button_div = document.createElement("div")
+                  fenetre_txt_header_full_button_div.id = "fenetre_txt_header_full_button_div"
+                  fenetre_txt_header_full_button.appendChild(fenetre_txt_header_full_button_div)
+
                 const fenetre_txt_header_close_button = document.createElement("div")
                 fenetre_txt_header_close_button.id = "fenetre_txt_header_close_button"
                 fenetre_txt_header_close_button.classList.add("fenetre_header_close_button")
                 fenetre_txt_header_area_button.appendChild(fenetre_txt_header_close_button)
     
-                const fenetre_txt_header_close_button_img = document.createElement("img")
-                fenetre_txt_header_close_button_img.src = "./asset/asset_desktop/cross.svg"
-                fenetre_txt_header_close_button.appendChild(fenetre_txt_header_close_button_img)
+                  const fenetre_txt_header_close_button_img = document.createElement("img")
+                  fenetre_txt_header_close_button_img.src = "./asset/asset_desktop/cross.svg"
+                  fenetre_txt_header_close_button.appendChild(fenetre_txt_header_close_button_img)
+
+                  fenetre_txt_header_close_button.onclick =function (){
+                    Desktop.removeChild(fenetre_txt)
+                  }
+
+                const fenetre_txt_header_other_button = document.createElement("div")
+                fenetre_txt_header_other_button.id = "fenetre_txt_header_other_button"
+                fenetre_txt_header_other_button.classList.add("fenetre_header_other_button")
+                fenetre_txt_header_area_button.appendChild(fenetre_txt_header_other_button)
+  
     
     
         const fenetre_txt_body = document.createElement("div")
         fenetre_txt_body.id = "fenetre_txt_body"
         fenetre_txt_body.classList.add("fenetre_body")
         fenetre_txt.appendChild(fenetre_txt_body)
+
+        const fenetre_txt_pdf = document.createElement("embed")
+        fenetre_txt_pdf.id = "fenetre_txt_pdf"
+        fenetre_txt_pdf.src = "./asset/asset_desktop/CV_formoso_Adrien_front.pdf"
+        fenetre_txt_pdf.style.height = "100%"
+        fenetre_txt_pdf.style.width = "100%"
+        fenetre_txt_pdf.classList.add("fenetre_body")
+        fenetre_txt_body.appendChild(fenetre_txt_pdf)
     
         const fenetre_txt_footer = document.createElement("div")
         fenetre_txt_footer.id = "fenetre_txt_footer"
@@ -145,6 +177,8 @@ function open_fenetre_txt () {
       
         fenetre_txt.style.maxWidth = taille_max_width_fenetre;
         fenetre_txt.style.maxHeight = taille_max_height_fenetre;
+
+
     
     } 
 
