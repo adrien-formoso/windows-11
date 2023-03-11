@@ -192,6 +192,50 @@ function create_desktop() {
     desktop.id = "Desktop"
     body.appendChild(desktop)
 
+        const desktop_moncv = document.createElement("div")
+        desktop_moncv.id = "desktop_moncv"
+        desktop_moncv.style.gridColumn = "1/1"
+        desktop_moncv.style.gridRow = "1/1"
+        desktop_moncv.style.display = "flex"
+        desktop_moncv.style.justifyContent = "center"
+        desktop_moncv.style.alignItems = "center"
+        desktop_moncv.style.flexDirection = "column"
+        desktop_moncv.style.borderRadius = "15px"
+        desktop_moncv.style.cursor = "pointer"
+        desktop.appendChild(desktop_moncv)
+
+        desktop_moncv.addEventListener("mouseover", function() {
+          desktop_moncv.style.boxShadow= "0 0";
+          desktop_moncv.style.backdropFilter = "blur(20px)"
+          desktop_moncv.style.margin = "5px"
+
+        });
+        desktop_moncv.addEventListener("mouseout", function() {
+          desktop_moncv.style.backdropFilter = "blur(0px)"
+          desktop_moncv.style.borderRadius = "0px"
+          desktop_moncv.style.margin = "0px"
+        });
+
+        desktop_moncv.onclick = function () {
+          if(!document.getElementById("fenetre_txt")){
+            open_fenetre_txt()
+          }
+        }
+        
+
+          const desktop_moncv_logo = document.createElement("img")
+          desktop_moncv_logo.src="./asset/asset_desktop/PDF_file_icon.svg"
+          desktop_moncv_logo.style.height = "60%"
+          desktop_moncv.appendChild(desktop_moncv_logo)
+
+          const desktop_moncv_span = document.createElement("span")
+          desktop_moncv_span.innerText= "mon-cv.pdf"
+          desktop_moncv_span.style.fontFamily = "Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif"
+          desktop_moncv_span.style.fontSize = "1.5vh"
+          desktop_moncv_span.style.fontWeight = "600"
+          desktop_moncv.appendChild(desktop_moncv_span)
+        
+
         const taskbar = document.createElement("div")
         taskbar.id = "taskbar"
         desktop.appendChild(taskbar)
