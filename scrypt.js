@@ -14,7 +14,7 @@ function open_fenetre_txt () {
     const fenetre_txt = document.createElement("div")
     fenetre_txt.id = "fenetre_txt"
     fenetre_txt.classList.add("fenetre")
-    fenetre_txt.style="position: absolute; left: 0; top: 0; width: 50vw;; height: 50vh;"
+    fenetre_txt.style="position: absolute; left: 0; top: 0; width: 50vw; height: 50vh";
     Desktop.appendChild(fenetre_txt)
     
     
@@ -42,19 +42,17 @@ function open_fenetre_txt () {
             fenetre_txt_header_area_button.classList.add("fenetre_header_area_button")
             fenetre_txt_header.appendChild(fenetre_txt_header_area_button)
 
-                const fenetre_txt_header_full_button = document.createElement("div")
-                fenetre_txt_header_full_button.id = "fenetre_txt_header_full_button"
-                fenetre_txt_header_full_button.classList.add("fenetre_header_full_button")
-                fenetre_txt_header_area_button.appendChild(fenetre_txt_header_full_button)
+                const fenetre_txt_header_refresh_button = document.createElement("div")
+                fenetre_txt_header_refresh_button.id = "fenetre_txt_header_refresh_button"
+                fenetre_txt_header_refresh_button.classList.add("fenetre_header_full_button")
+                fenetre_txt_header_area_button.appendChild(fenetre_txt_header_refresh_button)
                 
-                fenetre_txt_header_full_button.onclick = function () {
-                  fenetre_txt.style.width = "100%"
-                  fenetre_txt.style.height = "calc(100% - 7vh)"
-                }
 
-                  const fenetre_txt_header_full_button_div = document.createElement("div")
-                  fenetre_txt_header_full_button_div.id = "fenetre_txt_header_full_button_div"
-                  fenetre_txt_header_full_button.appendChild(fenetre_txt_header_full_button_div)
+
+                  const fenetre_txt_header_refresh_button_div = document.createElement("img")
+                  fenetre_txt_header_refresh_button_div.id = "fenetre_txt_header_refresh_button_div"
+                  fenetre_txt_header_refresh_button_div.src = "./asset/asset_desktop/refresh-icon.svg"
+                  fenetre_txt_header_refresh_button.appendChild(fenetre_txt_header_refresh_button_div)
 
                 const fenetre_txt_header_close_button = document.createElement("div")
                 fenetre_txt_header_close_button.id = "fenetre_txt_header_close_button"
@@ -120,7 +118,6 @@ function open_fenetre_txt () {
         
         function onMouseMove(event) {
             const left = event.clientX - offsetX;
-            const right = window.innerWidth - offsetX-event.clientX ;
          
             const width = div.offsetWidth;
             const leftdiv = div.offsetLeft;
@@ -178,7 +175,14 @@ function open_fenetre_txt () {
         fenetre_txt.style.maxWidth = taille_max_width_fenetre;
         fenetre_txt.style.maxHeight = taille_max_height_fenetre;
 
+        fenetre_txt_header_refresh_button.onclick = function () {
+          document.getElementById("Desktop").removeChild(fenetre_txt)
+          open_fenetre_txt()
+ 
+            fenetre_txt.style.height = "calc(100% - 6vh)"
+            fenetre_txt.style.width = "100%"
 
+        }
     
     } 
 
