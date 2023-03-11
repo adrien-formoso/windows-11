@@ -22,8 +22,8 @@
 
 #taskbar {
 
-    height: 6vh;
-    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 15;
     background-color: #1c1a18;
 
     display: flex;
