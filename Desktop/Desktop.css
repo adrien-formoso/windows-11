@@ -56,6 +56,7 @@
     width: 12vh;
     height: 100%;
     display: flex;
+    justify-content: flex-end;
     flex-direction: row-reverse;
 
 
@@ -70,11 +71,43 @@
     align-items: center;
     transition: all 0.1s;
     cursor: pointer;
+
+    order: 1;
+}
+
+.fenetre_header_full_button {
+    width: 33%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s;
+    cursor: pointer;
+
+    order: 2;
+}
+
+#fenetre_txt_header_other_button {
+    width: 33%;
+    height: 100%;
+    order: 3;
 }
 
 .fenetre_header_close_button > img{
     width: 80%;
     height: 80%;
+}
+
+.fenetre_header_full_button > div{
+    width: 1.5vh;
+    height: 1.5vh;
+    border : 1px solid white;
+    border-radius: 3px;
+}
+
+.fenetre_header_full_button:hover {
+    background-color: #575553
 }
 
 .fenetre_header_close_button:hover{
@@ -106,7 +139,6 @@
     height: 60%;
     min-height: 2vh;
     margin-left: 2vh;
-    user-select:none
 }
 
 #fenetre_txt_header_info > span {
