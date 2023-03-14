@@ -81,7 +81,7 @@ function open_fenetre_txt () {
 
         const fenetre_txt_pdf = document.createElement("embed")
         fenetre_txt_pdf.id = "fenetre_txt_pdf"
-        fenetre_txt_pdf.src = "./asset/asset_desktop/CV_formoso_Adrien_front.pdf"
+        fenetre_txt_pdf.src = "./asset/asset_desktop/CV_Adrien_formoso_fullstack.pdf"
         fenetre_txt_pdf.style.height = "100%"
         fenetre_txt_pdf.style.width = "100%"
         fenetre_txt_pdf.classList.add("fenetre_body")
@@ -276,7 +276,7 @@ login.onclick = function () {
                     login_div.appendChild(login_img)
 
                     const login_span = document.createElement("span")
-                    login_span.innerText = "Portfolio d'Adrien Formoso"
+                    login_span.innerText = "Adrien Formoso"
                     login_div.appendChild(login_span)
 
                     const login_btn = document.createElement("button")
